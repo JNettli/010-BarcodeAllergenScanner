@@ -1,0 +1,39 @@
+[{
+    "id": "5060896625638",
+    "title": "Monster Energy Drink - Lewis Hamilton",
+    "description": "Monster Energy Lewis Hamilton LH44 500ml Carbonated Energy Drink and 160mg caffeine. Developed by F1 World Champion, Lewis Hamilton, our R&D team worked flat out to deliver this light, crisp and refreshing blend. Serve cold for maximum refreshment.",
+    "image": "https://www.cooperscandy.no/upload/prod/800008579.jpg",
+    "price": "24,60",
+    "pant": "2,00",
+    "category": "Carbonated Energy Drink",
+    "allergens": ["Gluten", "Milk Protein", "Lactose"],
+    "ingredients": ["carbonated water", "acid (citric acid)", "taurine (0.4%)", "acidity regulator (sodium citrates)", "maltodextrin", "flavourings", "preservatives (potassium sorbate, sodium benzoate)", "caffeine (0.03%)", "sweeteners (sucralose, acesulfame K)", "vitamins (B3, B6, B2, B12)", "sodium chloride", "glucuronolactone", "inositol", "colour (E163)"],
+    "nutritional": {
+        "energy": "12 kJ (3 kcal)",
+        "fat": "0 g",
+        "saturatedFat": "0 g",
+        "carbohydrates": "0.8 g",
+        "sugar": "0 g",
+        "protein": "0 g",
+        "salt": "0.16 g"
+    }
+}, {
+    "id": "0",
+    "title": "",
+    "description": "",
+    "image": "",
+    "price": "",
+    "pant": "",
+    "category": "",
+    "allergens": [],
+    "ingredients": [],
+    "nutritional": {
+        "energy": "",
+        "fat": "",
+        "saturatedFat": "",
+        "carbohydrates": "",
+        "sugar": "",
+        "protein": "",
+        "salt": ""
+    }
+}]
