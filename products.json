@@ -25,7 +25,7 @@
     "price": "",
     "pant": "",
     "category": "",
-    "allergens": ["Egg", "Peanut"],
+    "allergens": ["Egg", "Peanut", "Gluten", "Cocoa"],
     "ingredients": [],
     "nutritional": {
         "energy": "",
