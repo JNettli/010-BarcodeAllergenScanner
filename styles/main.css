@@ -24,6 +24,7 @@ body {
     height: 100vh;
     max-height: 932px;
     position: relative;
+    background-color: #332333;
 }
 
 header {
@@ -35,18 +36,22 @@ header img {
     right: 32px;
 }
 
+.scanner-div {
+    display: flex;
+    justify-content: center;
+}
+
 .scanner-div h3 {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 270px;
     height: 270px;
-    border: 1px solid #000;
+    border: 1px solid #fff;
 }
 
 .manual-div {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 8px;
@@ -58,6 +63,12 @@ header img {
     height: 40px;
     font-size: 14px;
     color: #000;
+    display: relative;
+}
+
+.manual-div img {
+    position: absolute;
+    right: 32px;
 }
 
 footer {
