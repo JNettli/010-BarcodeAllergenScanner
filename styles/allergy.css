@@ -1,48 +1,13 @@
-/* Styling for header */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+body{
+    flex-direction: column;
 }
 
-/* Styling for product name */
-.ProductName {
-    font-weight: bold;
-    margin-top: 20px;
+main{
+    margin: 40px 32px 0px;
 }
 
-/* Styling for allergies checkboxes */
-.AllergiesCheckBoxes {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-/* Styling for individual allergens */
-.AllergiesCheckBoxes ul {
-    list-style: none;
-    padding: 0;
-}
-
-.AllergiesCheckBoxes ul li {
-    margin-bottom: 5px;
-}
-
-/* Styling for product image */
-.ProductImage {
-    width: 200px;
+figure img{
     height: 200px;
-    background-color: #ccc;
-}
-
-/* Styling for footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    width: 200px;
+    background-color: black;
 }

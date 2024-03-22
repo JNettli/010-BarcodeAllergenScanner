@@ -1,79 +1,58 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <title>Product</title>-->
-
-<!--</head>-->
-<!--<body>-->
-<!--<header>-->
-<!--    <div id="PlaceIdHolder" class="number">-->
-<!--        <p>Id-number:   </p>-->
-<!--    </div>-->
-<!--</header>-->
-<!--<div id="ProductName" class="ProductName">-->
-<!--    <p>-->
-<!--        Name:-->
-<!--    </p>-->
-<!--</div>-->
-<!--<main>-->
-<!--<div class="AllergiesCheckBoxes">-->
-<!--    <div>-->
-<!--        <ul>-->
-<!--            <li>Gluten</li>-->
-<!--            <li>Lactose</li>-->
-<!--            <li>Peanuts</li>-->
-<!--            <li>Insulin</li>-->
-<!--        </ul>-->
-<!--    </div>-->
-
-<!--    <div class="ProductImage"></div>-->
-
-<!--</div>-->
-<!--</main>-->
-<!--<footer>-->
-
-
-<!--</footer>-->
-
-
-
-<!-- </body>-->
-<!--</html>-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Product</title>
+    <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" type="text/css" href="/styles/allergy.css">
+
 </head>
 <body>
-<header>
-    <div id="PlaceIdHolder" class="number">
-        <p>Id-number:</p>
-    </div>
-
-    <div id="ProductName" class="ProductName">
-        <p>Name:</p>
-    </div>
-</header>
-<main>
-    <p>Allergies</p>
-    <div class="AllergiesCheckBoxes">
-        <div>
-            <ul>
-                <li>Gluten</li>
-                <li>Lactose</li>
-                <li>Peanuts</li>
-                <li>Insulin</li>
-            </ul>
+    <main>
+        <div id="first-section">
+            <p id="PlaceIdHolder">Id-number:</p>
+            <p id="ProductName">Name:</p>
         </div>
-        <div class="ProductImage"></div>
-    </div>
-</main>
-<footer>
-    <p>Footer content here</p>
-</footer>
+
+        <section id="second-section">
+            <h2>Allergies</h2>            
+                <ul id="allergen-list">
+                    <li>Gluten</li>
+                    <li>Lactose</li>
+                    <li>Peanuts</li>
+                    <li>Insulin</li>
+                </ul>
+        </section>
+
+        <figure id="third-section">
+            <img class="ProductImage"></img>
+        </figure>
+
+        <section id="fourth-section">
+            <h2> Nutritional Content</h2>
+        </section>
+    </main>
+    <footer>
+    <nav>
+        <a class="products">
+            <img
+                src="/assets/svg/products.svg"
+                alt="icon of a box"
+            />
+        </a>
+        <a class="cam">
+            <img
+                src="/assets/svg/camera.svg"
+                alt="icon of a camera"
+            />
+        </a>
+        <a class="allergy" href="/profile.html">
+            <img
+                src="/assets/svg/allergies.svg"
+                alt="an icon of wheat"
+            />
+        </a>
+    </nav>
+    </footer>
 </body>
 </html>
