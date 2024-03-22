@@ -101,7 +101,7 @@
     "price": "27.20",
     "pant": "0",
     "category": "Cookie",
-    "allergens": ["Wheat", "soyalecitin", "Milk"],
+    "allergens": ["Wheat", "Soy", "Milk"],
     "ingredients": ["hvetemel", "palmeolje", "sukker", "sjokoladebiter 18% (sukker, kakaomasse, vegetabilsk fett (palme, shea, sal), kakaosmør, emulgator (soyalecitin), aroma)", "mysepulver fra melk", "hevemidler (natron, hornsalt)", "salt", "aroma"],
     "nutritional": {
         "energy": "2104 kJ / 502 kcal",
@@ -120,7 +120,7 @@
     "price": "7.20",
     "pant": "0",
     "category": "Spice Mix",
-    "allergens": [""],
+    "allergens": [],
     "ingredients": ["Krydderier (spisskummen (15%), chilipepper (11%), hvitløk (7.9%))", "druesukker", "løk (17%)", "salt", "oregano (4.5%)", "gjærekstrakt", "potetstivelse", "antiklumpingsmiddel (siliciumdioxid)", "krydderiekstrakt (paprika)"],
     "nutritional": {
         "energy": "1250 kJ / 297 kcal",
@@ -158,7 +158,7 @@
     "price": "81.60",
     "pant": "0",
     "category": "Olive Oil",
-    "allergens": ["olives"],
+    "allergens": ["Olives"],
     "ingredients": ["Extra Virgin Olivenolje"],
     "nutritional": {
         "energy": "3404 kJ / 828 kcal",
