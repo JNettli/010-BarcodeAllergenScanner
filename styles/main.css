@@ -35,13 +35,14 @@ header img {
     right: 32px;
 }
 
-.scanner-div h3 {
+.scanner-div {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 270px;
-    height: 270px;
+    width: 400px;
+    height: 400px;
     border: 1px solid #000;
+    margin-bottom: 16px;
 }
 
 .manual-div {

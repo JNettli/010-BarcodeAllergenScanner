@@ -1,55 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Barcode Scanner</title>
-        <link rel="stylesheet" href="/styles/main.css" />
-        <script src="/scripts/app.js" defer></script>
-    </head>
-    <body>
-        <div class="container">
-            <header>
-                <img src="/assets/svg/flash.svg" alt="A flash svg" />
-            </header>
-            <main>
-                <div class="scanner-div">
-                    <h3>Scanner</h3>
-                </div>
-                <div class="manual-div">
-                    <input
-                        type="text"
-                        maxlength="13"
-                        placeholder="Enter barcode manually"
-                    />
-                    <img
-                        src="/assets/svg/enter.svg"
-                        alt="svg of a enter button"
-                    />
-                </div>
-            </main>
-            <footer>
-                <nav>
-                    <a class="products">
-                        <img
-                            src="/assets/svg/products.svg"
-                            alt="icon of a box"
-                        />
-                    </a>
-                    <a class="cam">
-                        <img
-                            src="/assets/svg/camera.svg"
-                            alt="icon of a camera"
-                        />
-                    </a>
-                    <a class="allergy" href="/profile.html">
-                        <img
-                            src="/assets/svg/allergies.svg"
-                            alt="an icon of wheat"
-                        />
-                    </a>
-                </nav>
-            </footer>
-        </div>
-    </body>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Barcode Scanner</title>
+<link rel="stylesheet" href="/styles/main.css" />
+<link rel="stylesheet" href="/styles/scanner.css" />
+<script src="/scripts/app.js" defer></script>
+</head>
+<body>
+<div class="container">
+  <header>
+    <img src="/assets/svg/flash.svg" alt="A flash svg" />
+  </header>
+  <main>
+    <div id="scanner" class="scan scanner-div" style="display: none;">
+      <div class="qrcode"></div>
+     
+      <div class="border"></div>
+    </div>
+    <div class="manual-div">
+      <input
+        type="text"
+        maxlength="13"
+        placeholder="Enter barcode manually"
+      />
+      <img src="/assets/svg/enter.svg" alt="svg of a enter button" />
+    </div>
+  </main>
+  <footer>
+    <nav>
+      <a class="products">
+        <img src="/assets/svg/products.svg" alt="icon of a box" />
+      </a>
+      <a class="cam" id="camera">
+        <img src="/assets/svg/camera.svg" alt="icon of a camera" />
+      </a>
+      <a class="allergy" href="/profile.html">
+        <img src="/assets/svg/allergies.svg" alt="an icon of wheat" />
+      </a>
+    </nav>
+  </footer>
+  <script src="./scripts/camera.js"></script>
+</div>
+</body>
 </html>
