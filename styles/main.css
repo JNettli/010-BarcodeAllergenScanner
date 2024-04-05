@@ -20,6 +20,7 @@ body {
     max-width: 430px;
     height: 100vh;
     position: relative;
+    justify-content: center;
 }
 
 header {
@@ -67,7 +68,7 @@ footer nav {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 100vw;
+    width: 430px;
     height: 120px;
     background-color: #209547;
 }
