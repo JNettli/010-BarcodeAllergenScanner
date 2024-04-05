@@ -2,7 +2,6 @@ const container = document.getElementById("container");
 const nextBTN = document.getElementById("nextBTN");
 const prevBTN = document.getElementById("prevBTN");
 let pageNum = 1;
-let products = [];
 
 // Function to fetch products from the API
 function fetchProducts(pageNum) {
