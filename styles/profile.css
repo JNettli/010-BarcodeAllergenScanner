@@ -1,4 +1,35 @@
-body{
+body {
     flex-direction: column;
     display: flex;
+}
+ 
+#allergen-container div {
+    background-color: antiquewhite;
+    padding: 8px;
+    border: 1px solid black;
+    margin-bottom: 8px;
+    max-width: 430px;
+    display: flex;
+    align-items: center;
+}
+ 
+label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+ 
+input[type=checkbox] {
+    height: 24px;
+    width: 24px;
+    margin: 0 8px 0 0;
+}
+ 
+label {
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ 
+main {
+    padding-bottom: 48px;
 }
