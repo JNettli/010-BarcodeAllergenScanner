@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Barcode Scanner</title>
         <link rel="stylesheet" href="/styles/main.css" />
-        <script src="/scripts/app.js" defer></script>
+        <script src="/scripts/index.js" defer></script>
     </head>
     <body>
         <div class="container">
@@ -17,15 +17,16 @@
                     <h3>Scanner</h3>
                 </div>
                 <div class="manual-div">
+                    <label for="EAN"></label>
                     <input
-                        type="text"
-                        maxlength="13"
-                        placeholder="Enter barcode manually"
+                        name="EAN"
+                        id="numeral-input"
+                        type="number"
+                        placeholder="Enter the 13 digits under the barcode"
                     />
-                    <img
-                        src="/assets/svg/enter.svg"
-                        alt="svg of a enter button"
-                    />
+                    <a href="#" id="proceed-button">                    
+                        <img src="/assets/svg/enter.svg" alt="svg of a enter button"/>
+                    </a>
                 </div>
             </main>
             <footer>
