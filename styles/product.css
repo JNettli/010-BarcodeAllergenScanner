@@ -1,10 +1,9 @@
-#product-image{
+#productImage {
     width: 100px;
     height: 100px;
 }
 
-
-.emphasized{
+.emphasized {
     background-color: red;
     color: white;
 }
