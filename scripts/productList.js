@@ -1,75 +1,74 @@
 const container = document.getElementById("container");
-const nextBTN = document.getElementById("nextBTN");
-const prevBTN = document.getElementById("prevBTN");
-let pageNum = 1;
+const productList = document.getElementById("productList");
+const loadMore = document.getElementById("loadMore");
+let pageNum = 20;
 
-// Function to fetch products from the API
 function fetchProducts(pageNum) {
-    return fetch(`https://kassal.app/api/v1/products?page=${pageNum}`, {
-        method: "GET",
+    return fetch(`https://kassal.app/api/v1/products?size=${pageNum}`, {
         headers: {
             Authorization: "Bearer YTzc29dgYRKS0pMRtLeakhxiVSwUZe56i9ki9OCm",
         },
     })
-        .then((resp) => resp.json())
+        .then((resp) => {
+            if (!resp.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return resp.json();
+        })
         .catch((error) => {
             console.error("Error fetching product data:", error);
-            throw error;
         });
 }
-
+// Function to display a single product
+function displayProduct(data) {
+    const productElement = document.createElement("a");
+    productElement.className = "productList";
+    productElement.href = `/products.html?id=${data.id}`;
+    productElement.innerHTML = `
+<h2>${data.name}</h2>
+<img src="${data.image}" alt="${data.name}"/>
+   `;
+    container.appendChild(productElement);
+}
 // Function to display products
 function displayProducts(products) {
     container.innerHTML = "";
-    products.forEach((product) => {
+    for (let i = 0; i < products.length; i++) {
+        displayProduct(products[i]);
+    }
+}
+
+// Fetch and display products
+async function fetchData() {
+    try {
+        const products = await fetchProducts(pageNum);
+        if (products) {
+            displayProducts(products.data);
+        } else {
+            console.error("No products fetched");
+        }
+    } catch (error) {
+        console.error("Error fetching products:", error);
+    }
+}
+fetchData();
+
+function displayProducts(productsData) {
+    productsData.forEach((product) => {
         displayProduct(product);
     });
 }
 
-// Function to display a single product
-function displayProduct(data) {
+function displayProduct(productData) {
     container.innerHTML += `
-        <div class="productList">
-            <h2>${data.name}</h2>
-            <img src="${data.image}"/>
-        </div>
+        <a class="productList" href="/product.html?ID=${productData.ean}">
+            <h2>${productData.name}</h2>
+            <img src="${productData.image}"/>
+        </a>
     `;
 }
 
-// Function to handle next button click
-nextBTN.addEventListener("click", function () {
-    pageNum++;
-    fetchMultiplePages();
+loadMore.addEventListener("click", function () {
+    pageNum += 20;
+    fetchData();
 });
-
-// Function to handle previous button click
-prevBTN.addEventListener("click", function () {
-    if (pageNum > 1) {
-        pageNum--;
-        fetchMultiplePages();
-    }
-});
-
-// Fetch and display multiple pages on load
-fetchMultiplePages();
-
-// Function to fetch multiple pages
-function fetchMultiplePages() {
-    const numPagesToFetch = 2;
-    const pageNumbersToFetch = Array.from(
-        { length: numPagesToFetch },
-        (_, i) => pageNum + i
-    );
-
-    Promise.all(pageNumbersToFetch.map((pageNum) => fetchProducts(pageNum)))
-        .then((pageResults) => {
-            products = pageResults.reduce(
-                (acc, pageResult) => acc.concat(pageResult.data),
-                []
-            );
-            displayProducts(products);
-        })
-        .catch((error) => {
-            console.error("Error fetching multiple pages:", error);
-        });
-}
