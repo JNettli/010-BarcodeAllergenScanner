@@ -21,17 +21,19 @@ function emphasizeAllergens() {
 
 function amendProduct(data) {
     if (data.data.products.length > 0) {
-        const product = data.data.products[0]; // Assuming you want the first product
-        const allergens = data.data.allergens; // Assuming allergens array is directly accessible
+        const product = data.data.products[0];
+        const allergens = data.data.allergens;
+        const filteredAllergens = allergens.filter(allergen => allergen.contains === "YES");
         
         const productInfo = `
             <h1>${product.name}</h1>
-            <img src="${product.image}" alt="${product.name}" id="product-image">
+            <img src="${product.image}" alt="${product.name}" id="productImage">
             <p>Allergens:</p>
             <div id="allergens-container">
-                ${allergens.map(allergen => `<div class="allergen">${allergen}</div>`).join('')}
+                ${filteredAllergens.map(allergen => `<div class="allergen">${allergen.display_name}</div>`).join('')}
             </div>
         `;
+
         productContainer.innerHTML = productInfo;
         emphasizeAllergens();
     } else {
@@ -40,6 +42,7 @@ function amendProduct(data) {
         productContainer.appendChild(titleElement);
     }
 }
+
 
 fetch(newUrl, {
     headers: {
