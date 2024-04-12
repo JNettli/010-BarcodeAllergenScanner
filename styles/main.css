@@ -3,12 +3,16 @@
 }
 
 html {
-    overflow-x: hidden;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
-    max-width: 430px;
-    display: flex;
+  max-width: 430px;
+  display: flex;
+  margin: 0;
 }
 
 .container {
