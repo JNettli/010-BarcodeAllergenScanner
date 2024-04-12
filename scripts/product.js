@@ -1,11 +1,11 @@
-const productContainer = document.getElementById("fetch-content");
+const productContainer = document.getElementById("fetchContent");
 const ApiUrl = "https://kassal.app/api/v1/products/ean/";
 const url = window.location.search;
 let eanId = url.slice(4, 17);
 let newUrl = ApiUrl + eanId;
 
 function emphasizeAllergens() {
-    const allergensContainer = document.getElementById("allergens-container");
+    const allergensContainer = document.getElementById("allergensContainer");
     const allergenDivs = allergensContainer.querySelectorAll(".allergen");
 
     allergenDivs.forEach((div) => {
@@ -23,18 +23,34 @@ function amendProduct(data) {
         const filteredAllergens = allergens.filter(
             (allergen) => allergen.contains === "YES"
         );
+        const nutrition = data.data.nutrition;
 
         const productInfo = `
+            <div id="productInfo">
             <h1>${product.name}</h1>
             <img src="${product.image}" alt="${product.name}" id="productImage">
-            <p>Allergens:</p>
-            <div id="allergens-container">
+            </div>
+            <div id="allergenInfo">
+            <h3>Allergens:</h3>
+            <div id="allergensContainer">
                 ${filteredAllergens
                     .map(
                         (allergen) =>
                             `<div class="allergen">${allergen.display_name}</div>`
                     )
                     .join("")}
+            </div>
+            </div>
+            <div id="nutritionInfo">
+            <h3>Nutrition:</h3>
+            <ul id="nutritionContainer">
+                ${nutrition
+                    .map(
+                        (nutrient) =>
+                            `<li><strong>${nutrient.display_name}:</strong> ${nutrient.amount} ${nutrient.unit}</li>`
+                    )
+                    .join("")}
+            </ul>
             </div>
         `;
 
