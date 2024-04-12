@@ -7,7 +7,7 @@ body {
     background-color: antiquewhite;
     padding: 8px;
     border: 1px solid black;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     max-width: 430px;
     display: flex;
     align-items: center;
@@ -29,7 +29,7 @@ input[type="checkbox"] {
 
 main {
     width: 430px;
-    padding-bottom: 48px;
+    margin-bottom: 174px;
 }
 
 h1,
