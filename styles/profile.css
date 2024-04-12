@@ -28,5 +28,11 @@ input[type="checkbox"] {
 }
 
 main {
+    width: 430px;
     padding-bottom: 48px;
+}
+
+h1,
+h2 {
+    text-align: center;
 }
