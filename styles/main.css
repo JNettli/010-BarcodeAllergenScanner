@@ -3,16 +3,16 @@
 }
 
 html {
-  overflow-x: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
-  max-width: 430px;
-  display: flex;
-  margin: 0;
+    max-width: 430px;
+    display: flex;
+    margin: 0;
 }
 
 .container {
@@ -48,9 +48,7 @@ header img {
 
 .manualDiv {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
     gap: 8px;
 }
 

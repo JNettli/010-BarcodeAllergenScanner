@@ -4,9 +4,10 @@ async function getContent(url) {
     try {
         const response = await fetch(url, {
             headers: {
-              Authorization: "Bearer YTzc29dgYRKS0pMRtLeakhxiVSwUZe56i9ki9OCm",
+                Authorization:
+                    "Bearer YTzc29dgYRKS0pMRtLeakhxiVSwUZe56i9ki9OCm",
             },
-          })
+        });
         const data = await response.json();
         const allergenList = new Set();
         data.data.allergens.forEach((product) => {
@@ -15,7 +16,6 @@ async function getContent(url) {
             });
         });
         const allergenCatalogue = [...allergenList];
-        console.log(allergenList);
         return allergenCatalogue;
     } catch {
         console.log("This does not work");
