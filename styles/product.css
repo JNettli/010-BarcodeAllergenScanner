@@ -1,16 +1,17 @@
-#fetch-content {
+#fetchContent {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 24px;
 }
 
-#fetch-content p {
-    font-size: 1.15rem;
+#fetchContent h3 {
+    font-size: 1.5rem;
     margin: 4px;
 }
 
-#allergens-container {
+#allergensContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,4 +27,26 @@
 .emphasized {
     background-color: red;
     color: white;
+}
+
+#nutritionInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+}
+
+#nutritionInfo li {
+    list-style-type: none;
+    text-align: left;
+    border: 1px solid #000;
+}
+
+#nutritionInfo ul {
+    padding: 0;
+}
+
+main {
+    width: 430px;
+    margin-bottom: 200px;
 }
