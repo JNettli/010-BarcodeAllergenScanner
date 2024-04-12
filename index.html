@@ -1,64 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Barcode Scanner</title>
-        <!--All StyleSheet-->
-        <link rel="stylesheet" href="styles/main.css" />
-        <link rel="stylesheet" href="./styles/scanner.css" />
-        <!--JS Scripts-->
-        <script src="scripts/index.js" defer></script>
-        <script src="scripts/camera.js" defer></script>
-    </head>
-    <body>
-        <div class="container">
-            <main>
-                <!-- Scanner Section -->
-                <div id="scanner" class="scannerDiv scan" style="display: none">
-                    <div class="qrcode"></div>
-                    <div class="border"></div>
-                </div>
-                <!--Manual Input Section-->
-                <div class="manualDiv">
-                    <label for="EAN"></label>
-                    <input
-                        name="EAN"
-                        id="numeralInput"
-                        type="number"
-                        placeholder="Enter the 13 digits under the barcode"
-                    />
-                    <a href="#" id="proceedButton">
-                        <img
-                            src="/assets/svg/enter.svg"
-                            alt="svg of a enter button"
-                        />
-                    </a>
-                </div>
-            </main>
-            <!--Footer Section-->
-            <footer>
-                <nav>
-                    <a class="products" href="/productList.html">
-                        <img
-                            src="/assets/svg/products.svg"
-                            alt="icon of a box"
-                        />
-                    </a>
-                    <a class="cam" id="camera" href="#">
-                        <img
-                            src="/assets/svg/camera.svg"
-                            alt="icon of a camera"
-                        />
-                    </a>
-                    <a class="allergy" href="/profile.html">
-                        <img
-                            src="/assets/svg/allergies.svg"
-                            alt="an icon of wheat"
-                        />
-                    </a>
-                </nav>
-            </footer>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barcode Scanner</title>
+    <!--All StyleSheet-->
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="./styles/scanner.css" />
+    <!--JS Scripts-->
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/camera.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <!-- Scanner Section -->
+        <div id="scanner" class="scannerDiv scan" style="display: none">
+          <div class="qrcode"></div>
+          <div class="border"></div>
         </div>
-    </body>
+        <!--Manual Input Section-->
+        <div class="manualDiv">
+          <div>
+            <label for="EAN"></label>
+            <input
+              name="EAN"
+              id="numeralInput"
+              type="number"
+              placeholder="Enter the 13 digits under the barcode"
+            />
+          </div>
+
+          <div>
+            <a href="#" id="proceedButton">
+              <img src="/assets/svg/enter.svg" alt="svg of a enter button" />
+            </a>
+          </div>
+        </div>
+      </main>
+      <!--Footer Section-->
+      <footer>
+        <nav>
+          <a class="products" href="/productList.html">
+            <img src="/assets/svg/products.svg" alt="icon of a box" />
+          </a>
+          <a class="cam" id="camera" href="#">
+            <img src="/assets/svg/camera.svg" alt="icon of a camera" />
+          </a>
+          <a class="allergy" href="/profile.html">
+            <img src="/assets/svg/allergies.svg" alt="an icon of wheat" />
+          </a>
+        </nav>
+      </footer>
+    </div>
+  </body>
 </html>

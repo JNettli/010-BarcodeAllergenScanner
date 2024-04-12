@@ -1,4 +1,3 @@
-
 window.onload = function() {
 
   var cameraButton = document.getElementById("camera");
@@ -9,16 +8,16 @@ window.onload = function() {
     // Toggle visibility of scanner section
     if (scanner.style.display === "none" || scanner.style.display === "") {
       scanner.style.display = "block";
-      manualInput.style.display = "none";
+     
       // Hide scanner section after 3 seconds and show toast message
       setTimeout(function() {
         scanner.style.display = "none";
-        manualInput.style.display = "block";
+       
         showToast("Please Enter Barcode Manually");
       }, 4000);
     } else {
       scanner.style.display = "none";
-      manualInput.style.display = "block";
+ 
     }
   });
   
@@ -29,6 +28,6 @@ window.onload = function() {
     document.body.appendChild(toast);
     setTimeout(function() {
       document.body.removeChild(toast);
-    }, 4000);
+    }, 3000);
   }
 };
