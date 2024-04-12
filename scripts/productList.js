@@ -69,6 +69,7 @@ function displayProduct(productData) {
 }
 
 loadMore.addEventListener("click", function () {
+    container.innerHTML = "";
     pageNum += 20;
     fetchData();
 });
