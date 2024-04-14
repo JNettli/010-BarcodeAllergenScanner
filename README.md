@@ -52,6 +52,11 @@ The Barcode Allergen Scanner is a web application designed to help users quickly
 ## Demo or Screenshots:
 [Link to Figma Design](https://www.figma.com/file/RB02EE4zorj5LwuhkXogdW/Allergy-App?type=design&node-id=0%3A1&mode=design&t=ltocGRlCOggKFK5C-1)
 (Screenshots of the app can be added here)
+- Home screen image (image of the homepage in the barcodescanner-app)
+  ![image of the homepage in the barcodescanner-app](assets/readme/Home screen.png)
+
+- Product page image ( image of the productpage in the barcodescanner-app)
+  ![image of the productpage in the barcodescanner-app](assets/readme/Product.png)
 
 ## Features:
 - Scan various barcode formats (UPC, QR codes, etc.).
