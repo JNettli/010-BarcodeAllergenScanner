@@ -77,10 +77,10 @@ Users can customize their allergy preferences within the app settings.
 
 ## Credits:
 - Jonas Netli (Project Manager) - [https://github.com/JNettli](#)
-- Chris Berg (UI/UX Designer) - [GitHub Profile](#)
-- Abdulla Al Harun (Lead Developer) - [GitHub Profile](#)
-- Aksel Oldeide (Database Manager) - [GitHub Profile](#)
-- Christian Westby (Quality Assurance) - [GitHub Profile](#)
+- Chris Berg (UI/UX Designer) - [https://github.com/ChrisBerg03](#)
+- Abdulla Al Harun (Lead Developer) - [https://github.com/AbdullaAlHarun](#)
+- Aksel Oldeide (Database Manager) - [https://github.com/AkselOldeide](#)
+- Christian Westby (Quality Assurance) - [https://github.com/ChristianWestby](#)
 - AI for the checkout icon (link to AI)
 
 ## License:
