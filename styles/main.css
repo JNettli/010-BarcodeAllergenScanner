@@ -9,6 +9,8 @@ html {
 body {
     max-width: 430px;
     display: flex;
+    background-image: url("../assets/images/backgroundimage.jpg");
+    background-size: cover;
 }
 
 .container {
