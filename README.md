@@ -76,11 +76,11 @@ The Barcode Allergen Scanner is a web application designed to help users quickly
 Users can customize their allergy preferences within the app settings.
 
 ## Credits:
-- John Doe (Project Manager) - [GitHub Profile](#)
-- Jane Smith (UI/UX Designer) - [GitHub Profile](#)
-- Michael Johnson (Lead Developer) - [GitHub Profile](#)
-- Emily Brown (Database Manager) - [GitHub Profile](#)
-- Alex Wilson (Quality Assurance) - [GitHub Profile](#)
+- Jonas Netli (Project Manager) - [https://github.com/JNettli](#)
+- Chris Berg (UI/UX Designer) - [GitHub Profile](#)
+- Abdulla Al Harun (Lead Developer) - [GitHub Profile](#)
+- Aksel Oldeide (Database Manager) - [GitHub Profile](#)
+- Christian Westby (Quality Assurance) - [GitHub Profile](#)
 - AI for the checkout icon (link to AI)
 
 ## License:
