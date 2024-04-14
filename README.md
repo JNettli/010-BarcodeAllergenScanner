@@ -37,3 +37,73 @@ The app categorizes products for easy browsing.
 As a user, I want the app to have an extensive barcode database.
 ### Acceptance Criteria:
 The app integrates with a comprehensive barcode database.
+
+# Barcode Allergen Scanner
+
+Welcome to the Barcode Allergen Scanner project! 
+Our team of five has developed a mobile application that allows users to scan product barcodes to retrieve allergy information. 
+This README will guide you through the project's overview, features, and how to get started with the application.
+
+## Project Overview
+
+The Barcode Allergen Scanner aims to address the need for quick and convenient access to allergy information while shopping for food products. 
+By scanning product barcodes or manually inputting codes, users can retrieve detailed allergy information and manage their own allergies within the app.
+
+## Design
+
+To get an overview of the app's design and user interface, 
+please refer to our Figma design: [Barcode Allergen Scanner - Figma Design](https://www.figma.com/file/RB02EE4zorj5LwuhkXogdW/Allergy-App?type=design&node-id=0%3A1&mode=design&t=ltocGRlCOggKFK5C-1)
+
+## Features
+
+### Product Information
+- Scan product barcodes to retrieve allergy information.
+- Manually input product codes for accessing allergy information.
+
+### Allergy Management
+- Input and manage personal allergies within the app.
+- Receive notifications or highlights if scanned products contain allergens the user is sensitive to.
+
+### Product Search
+- Search for products by name.
+- Browse products by category.
+
+### Barcode Database
+- Utilize an extensive barcode database integrated into the app.
+
+## Installation and Setup
+
+1. Clone the project repository from GitHub:
+
+```bash
+git clone https://github.com/JNettli/010-BarcodeAllergenScanner.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd 010-BarcodeAllergenScanner
+```
+
+3. Follow the setup instructions provided in the project's README file to install dependencies and set up the development environment.
+
+## Contributing
+
+We welcome contributions from the community to enhance the Barcode Allergen Scanner app. 
+If you'd like to contribute, please fork the repository, make your changes, and submit a pull request.
+
+## Team Members
+
+- John Doe (Project Manager)
+- Jane Smith (UI/UX Designer)
+- Michael Johnson (Lead Developer)
+- Emily Brown (Database Manager)
+- Alex Wilson (Quality Assurance)
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+---
+
+Thank you for your interest in the Barcode Allergen Scanner project. If you have any questions or feedback, feel free to reach out to us!
