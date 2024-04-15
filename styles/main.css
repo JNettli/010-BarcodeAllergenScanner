@@ -4,13 +4,15 @@
 
 html {
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
     max-width: 430px;
     display: flex;
-    background-image: url("../assets/images/backgroundimage.jpg");
-    background-size: cover;
+  
 }
 
 .container {
@@ -34,7 +36,7 @@ header img {
     right: 32px;
 }
 
-.scanner-div {
+.scannerDiv {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,15 +46,13 @@ header img {
     margin-bottom: 16px;
 }
 
-.manual-div {
+.manualDiv {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
     gap: 8px;
 }
 
-.manual-div input {
+.manualDiv input {
     text-align: center;
     width: 270px;
     height: 40px;

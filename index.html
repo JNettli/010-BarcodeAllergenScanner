@@ -4,48 +4,55 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Barcode Scanner</title>
-        <link rel="stylesheet" href="/styles/main.css" />
-        <script src="/scripts/index.js" defer></script>
+        <!--All StyleSheet-->
+        <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="./styles/scanner.css" />
+        <!--JS Scripts-->
+        <script src="scripts/index.js" defer></script>
+        <script src="scripts/camera.js" defer></script>
     </head>
     <body>
         <div class="container">
-            <header>
-                <h1>World`s Best Barcode Scanner for Allergies</h1>
-                <img src="/assets/svg/flash.svg" alt="A flash svg" />
-            </header>
             <main>
-                <div class="scanner-div">
-                    <h3>Scanner</h3>
+                <div id="scanner" class="scannerDiv scan" style="display: none">
+                    <div class="qrcode"></div>
+                    <div class="border"></div>
                 </div>
-                <div class="manual-div">
+                <div class="manualDiv">
                     <label for="EAN"></label>
                     <input
                         name="EAN"
-                        id="numeral-input"
+                        id="numeralInput"
                         type="number"
                         placeholder="Enter the 13 digits under the barcode"
                     />
-                    <a href="#" id="proceed-button">                    
-                        <img src="/assets/svg/enter.svg" alt="svg of a enter button"/>
+                    <a href="#" id="proceedButton">
+                        <img
+                            src="/assets/svg/enter.svg"
+                            alt="svg of a enter button"
+                        />
                     </a>
                 </div>
             </main>
             <footer>
                 <nav>
-                    <a class="products" href="/product-list.html">
-                        <img src="/assets/svg/products.svg" 
-                        alt="icon of a box" />
+                    <a class="products" href="/productList.html">
+                        <img
+                            src="/assets/svg/products.svg"
+                            alt="icon of a box"
+                        />
                     </a>
-        
-                    <a class="cam" href="/index.html">
-                        <img src="/assets/svg/camera.svg" 
-                        alt="icon of a camera" />
+                    <a class="cam" id="camera" href="#">
+                        <img
+                            src="/assets/svg/camera.svg"
+                            alt="icon of a camera"
+                        />
                     </a>
-        
                     <a class="allergy" href="/profile.html">
                         <img
                             src="/assets/svg/allergies.svg"
-                            alt="an icon of wheat"/>
+                            alt="an icon of wheat"
+                        />
                     </a>
                 </nav>
             </footer>

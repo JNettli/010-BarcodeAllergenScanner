@@ -1,10 +1,52 @@
-#product-image{
-    width: 100px;
-    height: 100px;
+#fetchContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
 }
 
+#fetchContent h3 {
+    font-size: 1.5rem;
+    margin: 4px;
+}
 
-.emphasized{
+#allergensContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+}
+
+#productImage {
+    max-width: 420px;
+    max-height: 320px;
+    margin-bottom: 16px;
+}
+
+.emphasized {
     background-color: red;
     color: white;
+}
+
+#nutritionInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+}
+
+#nutritionInfo li {
+    list-style-type: none;
+    text-align: left;
+    border: 1px solid #000;
+}
+
+#nutritionInfo ul {
+    padding: 0;
+}
+
+main {
+    width: 430px;
+    margin-bottom: 200px;
 }

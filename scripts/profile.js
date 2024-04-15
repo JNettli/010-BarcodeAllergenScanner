@@ -1,24 +1,26 @@
-const APIUrl = "https://raw.githubusercontent.com/JNettli/010-BarcodeAllergenScanner/main/products.json";
+const APIUrl = "https://kassal.app/api/v1/products/ean/7044610875996";
 
-async function getContent(url){
-    try{
-        const response = await fetch(url);
+async function getContent(url) {
+    try {
+        const response = await fetch(url, {
+            headers: {
+                Authorization:
+                    "Bearer YTzc29dgYRKS0pMRtLeakhxiVSwUZe56i9ki9OCm",
+            },
+        });
         const data = await response.json();
         const allergenList = new Set();
-        data.forEach(product => {
-            product.allergens.forEach(allergen => {
-                allergenList.add(allergen);
+        data.data.allergens.forEach((product) => {
+            data.data.allergens.forEach((allergen) => {
+                allergenList.add(allergen.display_name);
             });
         });
         const allergenCatalogue = [...allergenList];
-        console.log(allergenList)
-        return allergenCatalogue
-    }
-    catch{
+        return allergenCatalogue;
+    } catch {
         console.log("This does not work");
     }
 }
-
 
 function updateLocalStorageAllergens(allergen, checked) {
     if (checked) {
@@ -29,22 +31,22 @@ function updateLocalStorageAllergens(allergen, checked) {
 }
 
 getContent(APIUrl)
-    .then(allergenCatalogue => {
-        const allergenContainer = document.getElementById("allergen-container");
-        allergenCatalogue.forEach(allergen => {            
+    .then((allergenCatalogue) => {
+        const allergenContainer = document.getElementById("allergenContainer");
+        allergenCatalogue.forEach((allergen) => {
             const checkbox = document.createElement("input");
             checkbox.type = "checkbox";
-            checkbox.name = "allergen"
+            checkbox.name = "allergen";
             checkbox.value = allergen;
 
             const label = document.createElement("label");
-            label.textContent = allergen
+            label.textContent = allergen;
 
             if (localStorage.getItem(allergen) === "true") {
                 checkbox.checked = true;
             }
 
-            checkbox.addEventListener("change", function() {
+            checkbox.addEventListener("change", function () {
                 updateLocalStorageAllergens(allergen, this.checked);
             });
 
@@ -53,9 +55,8 @@ getContent(APIUrl)
             allergenDiv.appendChild(label);
 
             allergenContainer.appendChild(allergenDiv);
-       })
+        });
     })
-    .catch(error => {
-        console.log("Error", error)
-    })
-
+    .catch((error) => {
+        console.log("Error", error);
+    });
