@@ -51,7 +51,7 @@ The page uses a footer for navigation, containing the following symbol buttons:
 Users can customize their allergy preferences within the [profile page](https://midnightfalcons.netlify.app/profile) settings.
 
 ## Credits:
-- [Jonas Netli](https://github.com/JNettli)
+- [Jonas Nettli](https://github.com/JNettli)
 - [Chris Berg](https://github.com/ChrisBerg03)
 - [Abdulla Al Harun](https://github.com/AbdullaAlHarun)
 - [Aksel Oldeide](https://github.com/AkselOldeide)
