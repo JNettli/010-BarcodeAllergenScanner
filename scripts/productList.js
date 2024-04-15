@@ -19,7 +19,6 @@ function fetchProducts(pageNum) {
             console.error("Error fetching product data:", error);
         });
 }
-// Function to display a single product
 function displayProduct(data) {
     const productElement = document.createElement("a");
     productElement.className = "productList";
@@ -30,7 +29,6 @@ function displayProduct(data) {
    `;
     container.appendChild(productElement);
 }
-// Function to display products
 function displayProducts(products) {
     container.innerHTML = "";
     for (let i = 0; i < products.length; i++) {
@@ -38,7 +36,6 @@ function displayProducts(products) {
     }
 }
 
-// Fetch and display products
 async function fetchData() {
     try {
         const products = await fetchProducts(pageNum);
