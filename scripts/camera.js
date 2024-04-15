@@ -4,11 +4,9 @@ window.onload = function () {
     var manualInput = document.querySelector(".manualDiv");
 
     cameraButton.addEventListener("click", function () {
-        // Toggle visibility of scanner section
         if (scanner.style.display === "none" || scanner.style.display === "") {
             scanner.style.display = "block";
             manualInput.style.display = "none";
-            // Hide scanner section after 3 seconds and show toast message
             setTimeout(function () {
                 scanner.style.display = "none";
                 manualInput.style.display = "block";
