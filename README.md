@@ -5,8 +5,17 @@
 The Barcode Allergen Scanner is a web application designed to help users quickly access allergy information for various food products while shopping. Implemented using HTML, JavaScript, and CSS, the app allows users to manually input codes to retrieve detailed allergy information. The application is for the moment intended for mobile only, as a mobile viewport device is typically what you would carry in a store.
 
 ## Demo or Screenshots:
-![Scanning a product](assets/readme/scanning-product.jpg)
-![Product scanned](assets/readme/product-displayed.jpg)
+(Click image to open in full size)
+
+<div  style="display: flex; flex-direction: row;">
+    <a href="assets/readme/scanning-product.jpg">
+      <img src="assets/readme/scanning-product.jpg" alt="drawing" width="200"/> 
+  </a>
+    <a href="assets/readme/product-displayed.jpg">
+      <img src="assets/readme/product-displayed.jpg" alt="drawing" width="200"/>
+  </a>
+</div>
+
 
 ## Features:
 - Input barcodes to scan products for allergens instantly.
