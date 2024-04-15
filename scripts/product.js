@@ -1,4 +1,5 @@
 const productContainer = document.getElementById("fetchContent");
+const errorMessageElement = document.getElementById("errorMessage"); 
 const ApiUrl = "https://kassal.app/api/v1/products/ean/";
 const url = window.location.search;
 let eanId = url.slice(4, 17);
@@ -27,41 +28,45 @@ function amendProduct(data) {
 
         const productInfo = `
             <div id="productInfo">
-            <h1>${product.name}</h1>
-            <img src="${product.image}" alt="${product.name}" id="productImage">
+                <h1>${product.name}</h1>
+                <img src="${product.image}" alt="${product.name}" id="productImage">
             </div>
             <div id="allergenInfo">
-            <h3>Allergens:</h3>
-            <div id="allergensContainer">
-                ${filteredAllergens
-                    .map(
-                        (allergen) =>
-                            `<div class="allergen">${allergen.display_name}</div>`
-                    )
-                    .join("")}
-            </div>
+                <h3>Allergens:</h3>
+                <div id="allergensContainer">
+                    ${filteredAllergens
+                        .map(
+                            (allergen) =>
+                                `<div class="allergen">${allergen.display_name}</div>`
+                        )
+                        .join("")}
+                </div>
             </div>
             <div id="nutritionInfo">
-            <h3>Nutrition:</h3>
-            <ul id="nutritionContainer">
-                ${nutrition
-                    .map(
-                        (nutrient) =>
-                            `<li><strong>${nutrient.display_name}:</strong> ${nutrient.amount} ${nutrient.unit}</li>`
-                    )
-                    .join("")}
-            </ul>
+                <h3>Nutrition:</h3>
+                <ul id="nutritionContainer">
+                    ${nutrition
+                        .map(
+                            (nutrient) =>
+                                `<li><strong>${nutrient.display_name}:</strong> ${nutrient.amount} ${nutrient.unit}</li>`
+                        )
+                        .join("")}
+                </ul>
             </div>
         `;
 
         productContainer.innerHTML = productInfo;
         emphasizeAllergens();
+        errorMessageElement.style.display = "none";
     } else {
         const titleElement = document.createElement("h2");
         titleElement.textContent = "Product not found";
         productContainer.appendChild(titleElement);
+        errorMessageElement.style.display = "block";
     }
 }
+
+errorMessageElement.style.display = "none";
 
 fetch(newUrl, {
     headers: {
@@ -70,4 +75,7 @@ fetch(newUrl, {
 })
     .then((response) => response.json())
     .then((data) => amendProduct(data))
-    .catch((error) => console.log(error));
+    .catch((error) => {
+        console.log(error);
+        errorMessageElement.style.display = "block";
+    });
